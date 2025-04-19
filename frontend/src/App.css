@@ -1,0 +1,129 @@
+.booking-app {
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  background: #fff;
+  max-width: 1200px;
+  margin: auto;
+}
+.calendar-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.grid-container {
+  display: flex;
+  position: relative;
+}
+.labels-column {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  left: 0;
+  z-index: 3;
+}
+.corner-cell,
+.label-cell,
+.time-cell,
+.cell {
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+}
+.label-cell,
+.time-cell {
+  text-align: center;
+  line-height: 40px;
+}
+.time-cell {
+  background: #4285f4;
+  color: #fff;
+  flex-shrink: 0;
+}
+.time-header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  z-index: 2;
+}
+.scroll-panel {
+  overflow-x: auto;
+}
+.body-rows {
+  position: relative;
+}
+.row {
+  display: flex;
+}
+.cell {
+  width: 60px;
+  height: 40px;
+  flex: none;
+}
+.cell.selected {
+  background: #b3e5fc;
+}
+.booking-block {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 4;
+}
+.booking-block:not(.occupied) {
+  background: rgba(244, 67, 54, 0.9);
+}
+.booking-block.occupied {
+  background: rgba(76, 175, 80, 0.9);
+}
+.current-line {
+  pointer-events: none;
+  background: red;
+}
+.current-label {
+  pointer-events: none;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  z-index: 5;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+.modal {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 320px;
+}
+.modal label {
+  display: block;
+  margin: 8px 0;
+}
+.modal input,
+.modal select,
+.modal textarea {
+  width: 100%;
+  padding: 6px;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 12px;
+}
