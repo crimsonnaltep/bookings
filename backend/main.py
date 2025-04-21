@@ -9,7 +9,7 @@ from pydantic import BaseModel, Field
 from typing import List
 
 # Database URL from env (Postgres expected)
-SQLALCHEMY_DATABASE_URL = "postgresql://admin:dudHjgDhe73!@localhost/bookings"
+SQLALCHEMY_DATABASE_URL = "postgresql://admin:dudHjgDhe73!@localhost:5432/bookings"
 if not SQLALCHEMY_DATABASE_URL:
     raise RuntimeError("DATABASE_URL environment variable is not set for Postgres connection")
 
