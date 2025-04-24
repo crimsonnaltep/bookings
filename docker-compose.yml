@@ -24,7 +24,7 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
     environment:
-      - DATABASE_URL=postgresql://admin:dudHjgDhe73!@host.docker.internal:5432/bookings
+      - DATABASE_URL=postgresql://admin:dudHjgDhe73!:5432/bookings
     command: >
       uvicorn main:app
         --host 0.0.0.0
