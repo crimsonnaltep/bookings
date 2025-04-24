@@ -25,11 +25,11 @@ services:
     networks:
       - dev
 
-   frontend:
+  frontend:
     build:
       context: ./frontend
     ports:
-      - "3000:80"       # ← хост:контейнер
+      - "3000:80" # ← хост:контейнер
     networks: [dev]
 
 networks:
