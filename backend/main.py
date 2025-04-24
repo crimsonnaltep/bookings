@@ -12,7 +12,7 @@ from typing import List
 
 SQLALCHEMY_DATABASE_URL = os.getenv(
     "DATABASE_URL",
-    "postgresql://admin:dudHjgDhe73!@37.9.4.42:5432/bookings"  # запасной вариант
+    "postgresql://admin:dudHjgDhe73!@localhost:5432/bookings"  # запасной вариант
 )
 if not SQLALCHEMY_DATABASE_URL:
     raise RuntimeError("DATABASE_URL environment variable is not set for Postgres connection")
