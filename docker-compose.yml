@@ -25,14 +25,12 @@ services:
     networks:
       - dev
 
-  frontend:
+   frontend:
     build:
       context: ./frontend
-    command: npm run dev # или yarn dev
     ports:
-      - "3000:3000"
-    networks:
-      - dev
+      - "3000:80"       # ← хост:контейнер
+    networks: [dev]
 
 networks:
   dev:
