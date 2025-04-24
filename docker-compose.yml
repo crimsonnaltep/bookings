@@ -28,6 +28,9 @@ services:
   frontend:
     build:
       context: ./frontend
+    command: npm run dev # или yarn dev
+    ports:
+      - "3000:3000"
     networks:
       - dev
 
