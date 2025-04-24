@@ -22,7 +22,7 @@ services:
     networks:
       - dev
     environment:
-      - SQLALCHEMY_DATABASE_URL=postgresql://admin:dudHjgDhe73!@localhost:5432/bookings
+      - DATABASE_URL=postgresql://admin:dudHjgDhe73!@37.9.4.42:5432/bookings
 
   frontend:
     build:
