@@ -21,7 +21,7 @@ services:
       context: ./backend
     network_mode: "host"
     environment:
-      - DATABASE_URL=postgresql://admin:dudHjgDhe73!:5432/bookings
+      - DATABASE_URL=postgresql://admin:dudHjgDhe73!localhost:5432/bookings
     command: >
       uvicorn main:app
         --host 0.0.0.0
