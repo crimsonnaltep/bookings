@@ -19,8 +19,7 @@ services:
   backend:
     build:
       context: ./backend
-    networks:
-      - dev
+    network_mode: host
     environment:
       - DATABASE_URL=postgresql://admin:dudHjgDhe73!@37.9.4.42:5432/bookings
 
