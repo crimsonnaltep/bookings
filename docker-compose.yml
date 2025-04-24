@@ -19,7 +19,9 @@ services:
   backend:
     build:
       context: ./backend
-    network_mode: "host"
+    networks: dev
+    extra_hosts:
+  - "host.docker.internal:host-gateway"
     environment:
       - DATABASE_URL=postgresql://admin:dudHjgDhe73!@localhost:5432/bookings
     command: >
