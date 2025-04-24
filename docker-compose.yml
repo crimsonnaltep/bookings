@@ -21,12 +21,12 @@ services:
       context: ./backend
     networks:
       - dev
+    network_mode: host
+    environment:
+      - SQLALCHEMY_DATABASE_URL=postgresql://admin:dudHjgDhe73!@localhost:5432/bookings
 
   frontend:
     build:
       context: ./frontend
-    network_mode: host
-    environment:
-      - SQLALCHEMY_DATABASE_URL=postgresql://admin:dudHjgDhe73!@localhost:5432/bookings
     networks:
       - dev
