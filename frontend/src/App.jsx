@@ -3,7 +3,7 @@ import axios from "axios";
 import "./App.css";
 
 export default function App() {
-  const API_URL = "http://0.0.0.0:8000";
+  const API_URL = "http://37.9.4.42:8000";
   const CELL_WIDTH = 60;
   const CELL_HEIGHT = 40;
   const LABEL_WIDTH = 100;
